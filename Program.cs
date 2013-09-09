@@ -127,7 +127,11 @@ namespace ConsoleApplication2
                     {
                         arr1[0] -= servtime1;
                         SWITCHINGPROGRESS += servtime1;
-                        timewait1sum += servtime1;
+                        timewait1sum += servtime1;//прирост времени ожидания
+                        if ((arr2[0] > 0))
+                        {
+                            timewait2sum += servtime1; //прирост времени ожидания
+                        }
                     }
                     else SWITCHING = 2; //если заявок в первой очереди нет, идем во вторую
                 }
@@ -138,7 +142,11 @@ namespace ConsoleApplication2
                     {
                         arr2[0] -= servtime2;
                         SWITCHINGPROGRESS += servtime2;
-                        timewait2sum += servtime2;
+                        timewait2sum += servtime2;//прирост времени ожидания
+                        if ((arr1[0] > 0))
+                        {
+                            timewait1sum += servtime2;//прирост времени ожидания
+                        }
                     }
                     else SWITCHING = 1; //если заявок во второй очереди нет, идем в первую
                 }
