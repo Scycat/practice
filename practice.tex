@@ -252,9 +252,8 @@ namespace ConsoleApplication2
             {
                 arr2[i] = 0;
             }
-            //
+            
             //Главный цикл работы системы:
-            //
             for (double i = timer; i < 100000; i += timer)
             {
                 //добавляем новые заявки в очередь
@@ -288,7 +287,6 @@ namespace ConsoleApplication2
                 if ((SWITCHINGPROGRESS >= SWITCHINGFINAL2) && (SWITCHING == 2))
                 {
                     SWITCHING = 1;
-
                     SWITCHINGPROGRESS = 0; //сбросили прогресс, переключились на очередь 1
                 }
 
@@ -324,7 +322,6 @@ namespace ConsoleApplication2
                 }
 
                 //закончили обслуживать заявки, теперь сдвигаем массив, чтобы на 1м месте не было "пустого места", а была заявка
-
                 if ((arr1[0] <= 0))
                 {
                     for (int j = 0; j < buf1size - 1; j++)
